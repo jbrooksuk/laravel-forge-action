@@ -1,0 +1,15 @@
+name: 'Laravel Deploy Action'
+description: 'Trigger Laravel Forge Deployments with Github actions'
+author: 'jbrooksuk'
+branding:
+  icon: upload-cloud
+  color: red
+inputs:
+  webhook_url:
+    description: 'The Deploy Trigger Webhook URL'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    WEBHOOK_URL: ${{ inputs.webhook_url }}
