@@ -1,5 +1,5 @@
 name: 'Laravel Forge Deploy Action'
-description: 'Trigger Laravel Forge Deployments with Github actions'
+description: 'Trigger Laravel Forge Deployments with Github Actions'
 author: 'jbrooksuk'
 branding:
   icon: upload-cloud
@@ -7,9 +7,21 @@ branding:
 inputs:
   webhook_url:
     description: 'The Deployment Trigger URL'
-    required: true
+    required: false
+  api_key:
+    description: 'Laravel Forge API Key'
+    required: false
+  server_id:
+    description: 'Laravel Forge Server ID'
+    required: false
+  site_id:
+    description: 'Laravel Forge Site ID'
+    require: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
     WEBHOOK_URL: ${{ inputs.webhook_url }}
+    API_KEY: ${{ inputs.api_key }}
+    SERVER_ID: ${{ inputs.server_id }}
+    SITE_ID: ${{ inputs.site_id }}
