@@ -5,7 +5,7 @@ branding:
   icon: upload-cloud
   color: green
 inputs:
-  webhook_url:
+  trigger_url:
     description: 'The Deployment Trigger URL'
     required: false
   api_key:
@@ -21,7 +21,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   env:
-    WEBHOOK_URL: ${{ inputs.webhook_url }}
+    TRIGGER_URL: ${{ inputs.trigger_url }}
     API_KEY: ${{ inputs.api_key }}
     SERVER_ID: ${{ inputs.server_id }}
     SITE_ID: ${{ inputs.site_id }}
