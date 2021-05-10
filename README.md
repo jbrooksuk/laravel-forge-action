@@ -4,7 +4,7 @@ Deploy your application to [Laravel Forge](https://forge.laravel.com) with GitHu
 
 ## Credit
 
-Heavily based on [Glennmen/ploi-deploy-action](https://github.com/Glennmen/ploi-deploy-action).
+Heavily based on [Glennmen/ploi-deploy-action](https://github.com/Glennmen/ploi-deploy-action) :heart:
 
 ## Inputs
 
