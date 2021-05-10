@@ -52,7 +52,7 @@ jobs:
 
       # Trigger Laravel Forge Deploy
       - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.0
+        uses: jbrooksuk/laravel-forge-action@v1.0.1
         with:
           trigger_url: ${{ secrets.TRIGGER_URL }}
 ```
@@ -79,7 +79,7 @@ jobs:
 
       # Trigger Laravel Forge Deploy
       - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.0
+        uses: jbrooksuk/laravel-forge-action@v1.0.1
         with:
           api_key: ${{ secrets.API_KEY }}
           server_id: 1
