@@ -16,7 +16,7 @@ inputs:
     required: false
   site_id:
     description: 'Laravel Forge Site ID'
-    require: false
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
