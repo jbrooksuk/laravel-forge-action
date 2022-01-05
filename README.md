@@ -69,10 +69,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository to the GitHub Actions runner
-      - name: Checkout
-        uses: actions/checkout@v2
-
       # Trigger Laravel Forge Deploy
       - name: Deploy
         uses: jbrooksuk/laravel-forge-action@v1.0.2
