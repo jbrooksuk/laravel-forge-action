@@ -18,7 +18,7 @@ When using the trigger url to deploy your application, this field is required. Y
 
 If you want to use the API to deploy your application, you must provide `api_key`, `server_id` and `site_id`.
 
-You can generate an API key in your [Forge dashboard](https://forge.laravel.com/user/profile#/api).
+You can generate an API key in your [Forge dashboard](https://forge.laravel.com/user-profile/api).
 
 ### `server_id`
 
