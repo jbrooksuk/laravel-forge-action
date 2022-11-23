@@ -10,7 +10,7 @@ deploy_with_webhook() {
         --max-time 5 \
         --connect-timeout 5 \
         --request 'POST' \
-        "${TRIGGER_URL}"
+        "$TRIGGER_URL"
 }
 
 deploy_with_api() {
@@ -22,10 +22,10 @@ deploy_with_api() {
         --max-time 5 \
         --connect-timeout 5 \
         --request 'POST' \
-        -H "Authorization: Bearer ${API_KEY}" \
+        -H "Authorization: Bearer $API_KEY" \
         -H "Content-Type: application/json" \
         -H "Accept: application/json" \
-        "https://forge.laravel.com/api/v1/servers/${SERVER_ID}/sites/${SITE_ID}/deployment/deploy"
+        "https://forge.laravel.com/api/v1/servers/$SERVER_ID/sites/$SITE_ID/deployment/deploy"
 }
 
 if [ -n "$TRIGGER_URL" ]; then
