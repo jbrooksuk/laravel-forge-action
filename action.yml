@@ -17,6 +17,9 @@ inputs:
   site_id:
     description: 'Laravel Forge Site ID'
     required: false
+  orga_id:
+    description: 'Laravel Forge Organization ID'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,3 +28,4 @@ runs:
     API_KEY: ${{ inputs.api_key }}
     SERVER_ID: ${{ inputs.server_id }}
     SITE_ID: ${{ inputs.site_id }}
+    ORGA_ID: ${{ inputs.orga_id }}
