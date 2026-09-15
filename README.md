@@ -16,7 +16,7 @@ It is highly recommended that you store all inputs using [GitHub Secrets](https:
 | `api_key`     | If you want to use the API to deploy your application, you must provide `api_key`, `server_id`, `site_id` and `orga_id`.<br><br>You can generate an API key in your [Forge dashboard](https://forge.laravel.com/profile/api).<br><br>Make sure the `site:manage-deploys` scope is selected. |
 | `server_id`   | You can find the ID of the server in the server's detail panel.                                                                                                                                                                                                                             |
 | `site_id`     | You can find the ID of the site in the site's detail panel.                                                                                                                                                                                                                                 |
-| `orga_id`     | You can find the ID of the organization on the dashboard.                                                                                                                                                                                                                                   |
+| `org_id`     | You can find the ID of the organization on the dashboard.                                                                                                                                                                                                                                   |
 
 ## Examples
 
@@ -66,5 +66,5 @@ jobs:
           api_key: ${{ secrets.API_KEY }}
           server_id: ${{ secrets.SERVER_ID }}
           site_id: ${{ secrets.SITE_ID }}
-          orga_id: ${{ secrets.ORGA_ID }}
+          org_id: ${{ secrets.ORG_ID }}
 ```
