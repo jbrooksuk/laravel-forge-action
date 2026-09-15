@@ -25,14 +25,14 @@ deploy_with_api() {
         -H "Authorization: Bearer $API_KEY" \
         -H "Content-Type: application/json" \
         -H "Accept: application/json" \
-        "https://forge.laravel.com/api/v1/servers/$SERVER_ID/sites/$SITE_ID/deployment/deploy"
+        "https://forge.laravel.com/api/orgs/$ORG_ID/servers/$SERVER_ID/sites/$SITE_ID/deployments"
 }
 
 if [ -n "$TRIGGER_URL" ]; then
     deploy_with_webhook
 elif [ -n "$API_KEY" ]; then
-    if [ -z "$SERVER_ID" ] || [ -z "$SITE_ID" ]; then
-        echo "SERVER_ID and SITE_ID environment variables must be set. Exiting."
+    if [ -z "$SERVER_ID" ] || [ -z "$SITE_ID" ] || [ -z "$ORG_ID" ]; then
+        echo "SERVER_ID, SITE_ID and ORG_ID environment variables must be set. Exiting."
         exit 1
     fi
 
