@@ -38,7 +38,7 @@ jobs:
     steps:
       # Trigger Laravel Forge Deploy
       - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.2
+        uses: jbrooksuk/laravel-forge-action@v2.0.0
         with:
           trigger_url: ${{ secrets.TRIGGER_URL }}
 ```
@@ -61,7 +61,7 @@ jobs:
     steps:
       # Trigger Laravel Forge Deploy
       - name: Deploy
-        uses: jbrooksuk/laravel-forge-action@v1.0.2
+        uses: jbrooksuk/laravel-forge-action@v2.0.0
         with:
           api_key: ${{ secrets.API_KEY }}
           server_id: ${{ secrets.SERVER_ID }}
